@@ -1,0 +1,37 @@
+@use 'src/style/variables' as *
+
+.found-page
+    background-image: url(../../common/error.png)
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center center
+    justify-content: center !important
+
+    .error-message
+        text-align: center
+        margin-right: $size * 2
+        margin-bottom: $size * 2
+
+    .found-message
+        font-size: $size * 2.8
+        text-align: center
+        margin-right: $size * 2
+        padding: $size
+    
+    ion-icon
+        visibility: inherit
+
+    .error-icon
+        color: $error
+        width: $size * 8.2
+        height: $size * 8.2
+        margin-right: $size * 2
+        font-size: $size * 8.2  
+
+@media screen and ( max-width: 769px )
+    .found-page
+
+        .error-message,
+        .found-message,
+        .error-icon
+            margin-right: 0

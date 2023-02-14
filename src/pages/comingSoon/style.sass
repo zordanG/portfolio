@@ -1,0 +1,40 @@
+@use 'src/style/variables' as *
+
+.soon-page
+    background-image: url(../../common/developing.png)
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center center
+    color: $text-dark !important
+    justify-content: center !important
+
+    .build-message
+        text-align: center
+        margin-right: $size * 2
+        margin-bottom: $size * 2
+
+    .coming-message
+        border-top: 3px solid $text-dark
+        font-size: $size * 2.8
+        text-align: center
+        margin-right: $size * 2
+        padding: $size
+    
+    ion-icon
+        visibility: inherit
+
+    .working-icon
+        margin-bottom: $size * 5
+        width: $size * 8.2
+        height: $size * 8.2
+        margin-right: $size * 2
+        font-size: $size * 8.2
+
+@media screen and ( max-width: 769px )
+    .soon-page
+        .coming-message
+            margin-left: $size * 2
+
+        .build-message,
+        .working-icon
+            margin-right: 0

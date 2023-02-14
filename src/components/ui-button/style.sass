@@ -1,0 +1,62 @@
+@use 'src/style/variables' as *
+
+.language
+    .language-icon
+        background-size: cover
+        background-position: 50%
+        background-repeat: no-repeat
+        margin: $size
+        border: none
+        cursor: pointer
+
+    .language-icon:hover
+        border: 2px solid $primary
+
+    .selected
+        border: 2px solid $selected-lng
+        background-color: #FFFFFFAA
+
+.icon
+    .icon-button
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        cursor: pointer
+        border: none
+        background-color: transparent
+        margin: $size
+
+    .hover-effect
+        transition: 0.4s
+
+    .hover-effect:hover
+        scale: 1.1
+        transition: 0.4s
+
+    .icon-theme
+        color: $text
+    
+    ion-icon
+        visibility: inherit
+
+    p
+        color: $text
+        font-size: $size * 1.6
+        margin-left: $size
+        
+
+.md
+    width: $size * 4
+    height: $size * 4
+    font-size: $size * 1.6
+
+.lg
+    width: $size * 6
+    height: $size * 6
+    font-size: $size * 3.2
+
+.sm
+    width: $size * 2
+    height: $size * 2
+    font-size: $size * 0.8

@@ -1,0 +1,201 @@
+@use 'src/style/variables' as *
+
+// Introduction
+
+.presentation
+    background-color: $background
+
+.career
+    background-color: $secondary
+
+.projects
+    background-color: $primary
+
+.presentation,
+.career,
+.projects
+    width: 33vw
+    height: 100vh
+    color: $text
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+        
+    ion-icon
+        visibility: inherit
+
+    .intro-icon 
+        font-size: $size * 6
+        width: $size * 6
+        height: $size * 6
+        transition: 0.4s
+
+    .menu-link
+        text-decoration: none
+        color: transparentize($text, 1)
+        font-size: $size * 2.4
+        transition: 0.4s
+
+.presentation:hover,
+.career:hover,
+.projects:hover
+
+    .intro-icon
+        transform: translateY($size * -2)
+    
+    .menu-link
+        transition: 0.4s
+        color: $text
+
+// Project-Card
+
+.project-card
+    display: flex
+    margin-top: $size * 2
+    margin-right: $size * 2
+    height: $size * 25
+    width: $size * 18
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+    border: 5px solid $background
+    border-radius: 5px
+    box-shadow: 0 0 20px 1px $shadow
+    background-color: $background
+
+    .cover
+        width: $size * 18
+        height: $size * 18
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: contain
+
+    .project-info
+        width: $size * 18
+        height: $size * 7
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+
+        .project-title
+            font-weight: bold
+            font-size: $size * 1.8
+
+        .link
+            margin-top: $size
+            text-decoration: none
+            color: $text
+            display: flex
+            align-items: center
+            justify-content: center
+            transition: 0.4s
+            font-size: $size * 1.4
+
+        .link:hover
+            scale: 1.1
+            transition: 0.4s
+
+//Skill-Card
+    
+.card
+    background-color: $background
+    display: flex
+    justify-content: flex-start
+    width: 40%
+    max-width: $size * 38
+    min-width: $size * 32
+    height: $size * 10
+    box-shadow: 0 0 20px 0.3px $shadow
+    margin: $size * 2
+    
+    .item
+        margin: $size
+        display: flex
+        width: 100%
+        height: $size * 8
+
+        .icon-box
+            width: $size * 8
+            height: $size * 8
+            display: flex
+            align-items: center
+            justify-content: center
+
+            .icon
+                visibility: inherit
+                width: $size * 6
+                height: $size * 6
+                opacity: 0.3
+                transform: rotateZ(-15deg)
+
+        .desc
+            margin: 0 $size
+            display: flex
+            flex-direction: column
+            justify-content: center
+
+            h1
+                font-size: $size * 2.2
+
+.languages:hover
+    background-color: $languages
+
+.hard:hover
+    background-color: $hardskill
+    
+.soft:hover
+    background-color: $softskill
+
+.management:hover
+    background-color: $management
+
+
+@media screen and ( max-width: 769px )
+    
+    // Introduction
+
+    .presentation,
+    .career,
+    .projects
+        width: 100vw
+        height: 33vh
+
+        .menu-link
+            color: $text
+            
+        .intro-icon
+            transform: translateY($size * -2)
+        
+    
+    // Project-Card
+    .project-card
+        margin-right: 0
+
+    // Skill-Card
+    .card
+        margin: $size
+        margin-top: $size * 2
+        min-width: $size * 25
+        
+        .item
+            .icon-box
+                display: none
+
+            .desc
+                text-align: center
+
+    .languages
+        background-color: $languages
+    
+    .hard
+        background-color: $hardskill
+    
+    .soft
+        background-color: $softskill
+
+    .management
+        background-color: $management

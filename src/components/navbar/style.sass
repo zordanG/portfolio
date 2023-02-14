@@ -1,0 +1,135 @@
+@use 'src/style/variables' as *
+
+.navbar
+    width: $size * 7
+    
+    .logo
+        .shrink
+            left: $size * 4.5
+
+.navbar-open
+    width: $size * 19
+    
+    .logo
+        .shrink
+            left: $size * 17
+
+    .nav
+        .nav-link
+            width: $size * 18
+
+.navbar,
+.navbar-open
+    transition: 0.4s
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-start
+    height: 100vh
+    background-color: $background
+    box-shadow: 0 0 20px 1px $shadow
+    z-index: 10
+    position: fixed
+
+    .logo
+        height: 10vh
+
+        .shrink
+            display: flex
+            justify-content: center
+            align-items: center
+            color: $contrast
+            position: relative
+            background-color: $background
+            box-shadow: 0 0 20px 1px #211121
+            transition: 0.4s
+
+        .menu
+            width: 100vw
+            display: none
+            color: $contrast
+            position: relative
+            top: $size * 1.5
+            left: $size * 1.5
+
+    .nav
+        height: 80vh
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+
+        .nav-link
+            padding: 0
+            text-decoration: none
+            display: flex
+            align-items: center
+            justify-content: flex-start
+            height: $size * 3
+            color: $text
+            margin: ($size * 2) 0
+            transition: 0.4s
+
+        .nav-link:hover
+            scale: 1.1
+            transition: 0.4s
+
+    .config,
+    .config-open
+        width: 100%
+        display: flex
+        justify-content: flex-end
+        flex-direction: column
+        align-items: center
+        margin-bottom: $size
+        transition: 0.4s
+        min-height: 120px
+
+        .lang
+            display: flex
+
+        h3
+            font-size: $size * 1.4
+            margin-top: $size * 0.5
+            color: $text
+
+    .config
+        .lang
+            flex-direction: column
+
+    .config-open
+        .lang
+            flex-direction: row
+
+
+    
+@media screen and ( max-width: 769px )
+    .navbar
+        flex-direction: row
+        height: $size * 7
+        width: 100vw
+
+        .logo
+
+            .shrink
+                display: none
+
+            .menu
+                display: block
+
+        .nav
+            display: none
+
+        .config
+            display: none
+
+    .navbar-open
+        width: 100vw
+        justify-content: center
+        align-items: center
+        
+        .logo  
+            .shrink
+                display: none
+            .menu
+                display: block

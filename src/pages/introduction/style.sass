@@ -1,0 +1,12 @@
+@use 'src/style/variables' as *        
+
+.intro
+    width: 100vw
+    height: 100vh
+    display: flex
+    justify-content: flex-start
+    background-color: $primary
+
+@media screen and ( max-width: 769px )
+    .intro
+        flex-direction: column
