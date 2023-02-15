@@ -24,7 +24,10 @@ function buildPage(page){
 export default function MainRoutes() {
     return (
         <Routes>
+            {/* Rota para acessar pelo servidor local */}
             <Route path="/" element={<IntroductioPage />} />
+            {/* Rota para acessar pelo gh pages */}
+            <Route path="portfolio" element={<IntroductioPage />} />
             <Route path="skills" element={buildPage(<SkillsPage/>)} />
             <Route path="career" element={buildPage(<CareerPage />)} />
             <Route path="projects" element={buildPage(<ProjectsPage />)} />

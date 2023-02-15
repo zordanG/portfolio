@@ -101,7 +101,7 @@
 
 //Skill-Card
     
-.card
+.skill-card
     background-color: $background
     display: flex
     justify-content: flex-start
@@ -153,6 +153,43 @@
 .management:hover
     background-color: $management
 
+//Career-Card
+.career-card
+    background-color: $background
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    align-items: center
+    justify-content: center
+    text-align: center
+    width: 40vw
+    max-width: $size * 60
+    padding: $size
+    margin: $size 0
+    
+    .title
+        margin-bottom: $size
+        font-size: $size * 2.4
+        font-weight: bold
+        width: 100%
+    
+    .project
+        margin-bottom: $size * 0.5
+        font-size: $size * 1.8
+        width: 100%
+    
+    .team,
+    .desc
+        margin-bottom: $size
+        width: 100%
+    
+    .techs
+        width: 100%
+        max-width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
 
 @media screen and ( max-width: 769px )
     
@@ -176,7 +213,7 @@
         margin-right: 0
 
     // Skill-Card
-    .card
+    .skill-card
         margin: $size
         margin-top: $size * 2
         min-width: $size * 25
@@ -199,3 +236,6 @@
 
     .management
         background-color: $management
+        
+    .career-card
+        width: 90vw

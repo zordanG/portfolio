@@ -2,6 +2,7 @@ import './style.sass';
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { ItemDisplay } from '../item-display/view';
 
 function IntroCard(props) {
     const { t } = useTranslation();
@@ -30,7 +31,7 @@ function ProjectCard(props) {
 
 function SkillCard(props) {
     return(
-        <div className={"card round-border " + props.type}>
+        <div className={"skill-card round-border " + props.type}>
             <div className="item">
                 <div className="icon-box">
                     <ion-icon class="icon" name={props.icon} />
@@ -44,4 +45,18 @@ function SkillCard(props) {
     );
 }
 
-export {IntroCard, ProjectCard, SkillCard};
+function CareerCard(props) {
+    return(
+        <div className="career-card round-border">
+            <h1 className="title">{props.title}</h1>
+            <h3 className="project">{props.project}</h3>
+            <p className="desc">{props.desc}</p>
+            <p className="team">{props.team}</p>
+            <div className="techs">
+                <ItemDisplay tech={props.techs}/>
+            </div>
+        </div>
+    );
+}
+
+export {IntroCard, ProjectCard, SkillCard, CareerCard};
