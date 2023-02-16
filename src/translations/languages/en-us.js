@@ -43,13 +43,21 @@ const messages = {
                 mentoringDesc: "I can guide and mentor people easily",
             },
             projects: {
-                cookerz: "App developed intending to disseminate cooking knowledge",
-                planz: "App developed to help in team management",
+                cookerz: "App developed intending to disseminate cooking knowledge, by sharing recipes and tips. Every user can share and everyone can use it.",
+                planz: "App developed to help in team management, attributing tasks, managing time, and providing a systema to control rewards/goals.",
             },
             status: {
                 dev: "Under development",
                 plan: "Planning",
                 ok: "Finished"
+            },
+            career:{
+                teamSize_one: "Team size: {{count}} person",
+                teamSize_other: "Team size: {{count}} people",
+                systemar: "Condominium management system",
+                systemarDesc: "System to help administrators in accountability, communication, condominium maganement, etc.",
+                somadatta: "API's integration system",
+                somadattaDesc: "System develloped to integrate suppliers inventory API's with local inventory.",
             },
             buildingPage: "We're working on it.",
             comingSoonMessage: "This and more will be added soon.",
@@ -57,6 +65,10 @@ const messages = {
             config: "Settings",
             error404: "Error 404",
             notFound: "Seens like we're lost, we're unable to find the page.",
+            code: "Code",
+            url: "Access",
+            tech: "Used technologies",
+            projectImg: "Project screen"
         }
     }
 }

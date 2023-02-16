@@ -43,13 +43,21 @@ const messages = {
                 mentoringDesc: "Consigo guiar e ensinar de forma clara outras pessoas",
             },
             projects: {
-                cookerz: "Aplicativo criado com o intuito de disseminar o conhecimento culinário",
-                planz: "Aplicativo criado para auxiliar no gerenciamento de times"
+                cookerz: "Aplicativo criado com o intuito de disseminar o conhecimento culinário, atravéz do compartilhamento de receitas e dicas. Cada usuário pode contribuir e todos podem usufruir.",
+                planz: "Aplicativo criado para auxiliar no gerenciamento de times, delegando funções, gerenciando tempo, e possibilitando um sistema para controle de reconpensas/metas."
             },
             status: {
                 dev: "Em desenvolvimento",
-                plan: "Planejamento",
+                plan: "Em Planejamento",
                 ok: "Finalizado"
+            },
+            career:{
+                teamSize_one: "Tamanho do time: {{count}} pessoa",
+                teamSize_other: "Tamanho do time: {{count}} pessoas",
+                systemar: "Sistema de gestão de condomínios",
+                systemarDesc: "Sistema para auxiliar administradoras no controle contábil, comunicação, gestão dos condomínios, etc.",
+                somadatta: "Sistema de integração de API's",
+                somadattaDesc: "Sistema desenvolvido para integrar as API's de estoque dos fornecedores com o estoque local.",
             },
             buildingPage: "Estamos trabalhando nisso.",
             comingSoonMessage: "Esta e mais, em breve serão adicionadas.",
@@ -57,6 +65,10 @@ const messages = {
             config: "Configurações",
             error404: "Erro 404",
             notFound: "Parece que nos perdemos, não foi possível encontrar a página.",
+            code: "Código",
+            url: "Acessar",
+            tech: "Tecnologias utilizadas",
+            projectImg: "Tela do projeto"
         }
     }
 }

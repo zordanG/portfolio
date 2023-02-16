@@ -1,5 +1,6 @@
 @use 'src/style/variables' as *
 
+//Language-Button
 .language
     .language-icon
         background-size: cover
@@ -16,6 +17,7 @@
         border: 2px solid $selected-lng
         background-color: #FFFFFFAA
 
+//Icon-Button
 .icon
     .icon-button
         display: flex
@@ -60,3 +62,32 @@
     width: $size * 2
     height: $size * 2
     font-size: $size * 0.8
+
+//Link-Button
+.link
+    margin: $size ($size * 0.5)
+    margin-top: $size * 1.5
+
+    a
+        text-decoration: none
+        color: $text
+        padding: ($size * 0.5) $size
+        margin: 1.6px
+
+    .red:hover
+        border: 2px solid $red
+        margin: 0
+
+    .blue:hover
+        border: 2px solid $blue
+        margin: 0
+    
+@media screen and ( max-width: 769px )
+
+    //Link-Button
+    .link
+        .red
+            border: 2px solid $red
+
+        .blue
+            border: 2px solid $blue

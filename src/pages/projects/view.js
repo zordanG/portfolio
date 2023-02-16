@@ -1,28 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { ProjectCard } from '../../components/card/view';
 import gearImage from '../../common/gear.png';
 import { useTranslation } from 'react-i18next';
 import './style.sass'
+import { ProjectsData } from '../../data';
 
 function ProjectsPage() {
   const { t } = useTranslation();
-  const [projects, setProjects] = useState();
-  const API_URL = "http://localhost:4000/projects";
-   
-  useEffect(() => {
-    fetch(API_URL)
-    .then((response)=> {
-      return response.json();
-    })
-    .then((items) => {
-      setProjects(items);
-    })
-    
-    return () => false
-  }, [])
+  const projects = ProjectsData();
 
   return (
-    <div className="page project">
+    <div className="page projects">
       <div className="info">
         <h1> {t("menu.projects")} </h1>
       </div>

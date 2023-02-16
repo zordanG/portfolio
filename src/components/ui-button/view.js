@@ -35,5 +35,13 @@ function IconButton(props) {
         </div>
     )
 }
+
+function LinkButton(props) {
+    return(
+        <div className={props.path ? "link" : "hide"}>
+            <a className={"round-border " + props.color} href={props.path} target="_blank" rel="noreferrer"> {props.text} </a>
+        </div>
+    )
+}
   
-export {LanguageButton, IconButton};
+export {LanguageButton, IconButton, LinkButton};

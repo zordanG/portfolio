@@ -1,1 +1,75 @@
 @use 'src/style/variables' as *
+
+.project
+    .project-info
+        background-color: $background
+        margin: $size
+        padding: $size
+        max-width: $size * 70
+        box-shadow: 0 0 20px 1px $shadow
+
+        .project-header
+            display: flex
+            align-items: flex-end
+            justify-content: center
+            margin-bottom: $size * 5
+
+            .links
+                .name,
+                .status
+                    margin-left: $size * 1.5
+
+                .buttons
+                    display: flex
+            
+            .img
+                width: $size * 18
+                height: $size * 18
+
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: contain
+
+        .project-content
+            display: flex
+            flex-direction: column
+            text-align: center
+
+            .techs
+                width: 100%
+                display: flex
+                justify-content: center
+                align-items: center
+                flex-wrap: wrap
+                margin-bottom: $size * 2
+
+            .desc
+                margin: ($size * 2) 0
+            
+            .carousel
+                margin-bottom: $size * 1.5
+
+                .img-carousel
+                    max-width: 300px
+            
+@media screen and ( max-width: 769px )
+
+    .project
+        .project-info
+            margin-top: $size * 9
+
+            .project-header
+                align-items: center
+                flex-direction: column
+                
+                .links
+                    text-align: center
+
+                    .name,
+                    .status
+                        margin-left: 0
+
+                    .buttons
+                        justify-content: center
+                        align-items: center

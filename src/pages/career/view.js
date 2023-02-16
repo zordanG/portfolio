@@ -1,9 +1,11 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { CareerCard } from '../../components/card/view';
-import './style.sass'
+import { CareerData } from '../../data';
+import './style.sass';
 
 function CareerPage() {
+  const career = CareerData();
   const { t } = useTranslation();
 
   return (
@@ -12,20 +14,18 @@ function CareerPage() {
         <h1> {t("menu.career")} </h1>
       </div>
       <div className="cards-grid">
-        <CareerCard
-          project="Sistema de integração de API's"
-          title="Dev. Full-Stack"
-          desc="Sistema desenvolvido para integrar as API's de estoque dos fornecedores com o estoque local."
-          team="Tamanho do time: Apenas eu"
-          techs={["HTML", "CSS", "Javascript", "PHP", "Fetch API"]}
-        />
-        <CareerCard
-          project="Sistema de gestão de condomínios"
-          title="Dev. Jr. Full-Stack"
-          desc="Sistema para auxiliar administradoras no controle contábil, comunicação, gestão dos condomínios, etc."
-          team="Tamanho do time: 4 pessoas"
-          techs={["EmberJS", "Laravel", "SASS", ]}
-        />
+      { career ?
+        career.map((job) => {
+          return <CareerCard
+            key={job.project}
+            project={t(job.project)}
+            title={job.title}
+            desc={t(job.desc)}
+            team={t(job.team, {count: job.size})}
+            techs={job.techs}
+          />
+          })
+          : false }
       </div>
     </div>
   );
