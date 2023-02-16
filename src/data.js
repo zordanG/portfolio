@@ -2,20 +2,29 @@ function CareerData() {
    return [
         {
             "project": "career.somadatta",
-            "title": "Dev. Full-Stack",
+            "title": "career.somadattaTitle",
             "desc": "career.somadattaDesc",
             "team": "career.teamSize",
-            "techs": ["HTML", "CSS", "Javascript", "PHP"],
+            "techs": ["HTML", "CSS", "Javascript", "PHP", "Kanban"],
             "size": 1
         },
         {
             
           "project": "career.systemar",
-          "title": "Dev. Jr. Full-Stack",
+          "title": "career.systemarTitle",
           "desc": "career.systemarDesc",
           "team": "career.teamSize",
-          "techs": ["EmberJS", "Laravel", "SASS"],
+          "techs": ["EmberJS", "Laravel", "SASS", "Kanban"],
           "size": 4
+        },
+        {
+            
+          "project": "career.aiesec",
+          "title": "career.aiesecTitle",
+          "desc": "career.aiesecDesc",
+          "team": "career.teamSize",
+          "techs": ["UI/UX", "CX", "OKR", "Kanban"],
+          "size": 6
         }
     ]
 }

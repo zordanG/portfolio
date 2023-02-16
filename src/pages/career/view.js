@@ -19,7 +19,7 @@ function CareerPage() {
           return <CareerCard
             key={job.project}
             project={t(job.project)}
-            title={job.title}
+            title={t(job.title)}
             desc={t(job.desc)}
             team={t(job.team, {count: job.size})}
             techs={job.techs}
