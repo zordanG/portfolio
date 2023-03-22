@@ -44,7 +44,8 @@ const messages = {
             },
             projects: {
                 cookerz: "Aplicativo criado com o intuito de disseminar o conhecimento culinário, atravéz do compartilhamento de receitas e dicas. Cada usuário pode contribuir e todos podem usufruir.",
-                planz: "Aplicativo criado para auxiliar no gerenciamento de times, delegando funções, gerenciando tempo, e possibilitando um sistema para controle de reconpensas/metas."
+                planz: "Aplicativo criado para auxiliar no gerenciamento de times, delegando funções, gerenciando tempo, e possibilitando um sistema para controle de reconpensas/metas.",
+                todo: "Lista to-do, com posibilidade de organização em kanban para auxiliar no controle e execução de atividades"
             },
             status: {
                 dev: "Em desenvolvimento",

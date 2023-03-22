@@ -45,6 +45,7 @@ const messages = {
             projects: {
                 cookerz: "App developed intending to disseminate cooking knowledge, by sharing recipes and tips. Every user can share and everyone can use it.",
                 planz: "App developed to help in team management, attributing tasks, managing time, and providing a systema to control rewards/goals.",
+                todo: "To-do list, with the possibility to use kanban, to help priorotize and manage time"
             },
             status: {
                 dev: "Under development",
